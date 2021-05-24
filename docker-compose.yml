@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+    dnsmasq:
+        build: ./build
+        container_name: dnsmasq
+        restart: always
+        environment:
+            TZ: America/Los_Angeles
+        volumes:
+            - ./dnsmasq.conf:/etc/dnsmasq.conf
+            - ./hosts:/etc/dnsmasq-hosts
+        ports:
+            - "53:53/udp"
+        logging:
+            options:
+                max-size: "100m"
+        # cap_add:
+        #     - NET_ADMIN
