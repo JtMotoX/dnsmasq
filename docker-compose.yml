@@ -12,8 +12,8 @@ services:
         volumes:
             - ./dnsmasq.conf:/etc/dnsmasq.conf
             - ./hosts:/etc/dnsmasq-hosts
-        ports:
-            - "53:53/udp"
+        # ports:
+        #     - "53:53/udp"
         logging:
             options:
                 max-size: "100m"
