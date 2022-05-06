@@ -26,4 +26,4 @@ if test -f ${HOSTS_FILE}; then
 	done &
 fi
 
-dnsmasq --no-daemon --log-queries --log-facility=/var/log/dnsmasq.log
+dnsmasq --no-daemon
