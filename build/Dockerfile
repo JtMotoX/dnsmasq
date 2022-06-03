@@ -11,4 +11,5 @@ RUN chmod 755 /entrypoint.sh
 
 EXPOSE 53 53/udp
 
+CMD [ "run" ]
 ENTRYPOINT ["/entrypoint.sh"]
