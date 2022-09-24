@@ -12,7 +12,7 @@ RUN setcap CAP_NET_BIND_SERVICE=+eip /usr/sbin/dnsmasq
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod 755 /entrypoint.sh
 
-USER 1001
+USER 9001:9001
 
 EXPOSE 53 53/udp
 
